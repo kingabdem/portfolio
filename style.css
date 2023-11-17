@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Saira:wght@700&display=swap");
+=@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Saira:wght@700&display=swap");
 
 :root {
   --primary-color: #033b4a;
@@ -13,8 +13,8 @@
   box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,6 +31,54 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+/* Loading */
+
+/* Ajoutez ces styles à votre fichier CSS */
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right: 0.25em solid transparent;
+  border-radius: 50%;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+  display: flex;
+  margin: 20px auto 0px;
+
+}
+
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.2em;
+}
+
+.spinner-border.text-info {
+  border-color: #0d6efd;
+  border-right-color: transparent;
+}
+
+.spinner-border.text-info::before {
+  border-color: transparent #0d6efd transparent transparent;
 }
 
 /* utility class */
@@ -63,6 +111,7 @@ a {
 #home {
   background-color: var(--bg-primary);
   height: 100vh;
+  max-height: 100vh;
 }
 
 #home .navbar {
@@ -163,15 +212,14 @@ header .header-content img {
 #skills,
 #services,
 #portfolio {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 
 #about h2,
 #skills h2,
 #services h2,
 #portfolio h2,
-#contact h2
-{
+#contact h2 {
   text-align: center;
   font-size: 38px;
   color: var(--primary-color);
@@ -225,7 +273,8 @@ header .header-content img {
   background-color: var(--primary-color);
 }
 
-#skills h2 , #portfolio h2  {
+#skills h2,
+#portfolio h2 {
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
@@ -275,7 +324,8 @@ header .header-content img {
 
 /* Services start */
 
-#services , #contact {
+#services,
+#contact {
   background: #00f4ab0c;
 }
 
@@ -328,82 +378,108 @@ header .header-content img {
 
 /* Portfolio start */
 
-#portfolio{
-    background-color: var(--primary-color);
+#portfolio {
+  background-color: var(--primary-color);
 }
 
-#portfolio .row{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: center;
-    gap: 2rem;
-    margin-top: 4rem;
+#portfolio .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
-#portfolio .row .item{
-    background-color: #fff;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+#portfolio .row .item {
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-#portfolio .row .item:hover{
-    transform: scale(1.03);
+#portfolio .row .item:hover {
+  transform: scale(1.03);
 }
 
-#portfolio .row .item .item-content{
-    padding: 20px 15px 30px;
+#portfolio .row .item .item-content {
+  padding: 20px 15px 30px;
 }
 
-#portfolio .row .item .item-content h3{
-    font-size: 20px;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+#portfolio .row .item .item-content h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
-#portfolio .row .item .item-content a{
-    font-size: 14px;
-    color: var(--secondary-color);
-    font-weight: 500;
+#portfolio .row .item .item-content a {
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-weight: 500;
 }
 
-#portfolio .row .item img{
-    max-width: 100%;
-    width: 100%;
-    height: 180px;
-    border-bottom: 2px solid #ccc;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+#portfolio .row .item img {
+  max-width: 100%;
+  width: 100%;
+  height: 180px;
+  border-bottom: 2px solid #ccc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.down {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.down > .down-container:hover {
+  background-color: rgba(255, 250, 245, 0.637);
+  cursor: pointer;
+}
+
+.down-container {
+  background-color: rgba(255, 250, 245, 0.863);
+  padding: 10px;
+  border: 1px solid rgba(255, 250, 245, 0.863);
+  height: 43px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.down > .down-container > .fa-angles-down {
+  color: black;
+  font-size: x-large;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Portfolio end */
 
 /* Contact start */
 
-#contact{
-    padding: 4rem 0;
-
+#contact {
+  padding: 4rem 0;
 }
 
-#contact .row{
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    column-gap: 2rem;
-    background: #fff;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-    padding: 2rem 3rem;
-    border-radius: 10px;
-
+#contact .row {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  background: #fff;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+  border-radius: 10px;
 }
 
-#contact .row input , #contact .row textarea{
-    display: block;
-    width: 100%;
-    margin: 20px 0;
-    padding: 10px;
-    outline: none;
-    background-color: #00f4ab0c;
-    border: 1px solid #bbb;
+#contact .row input,
+#contact .row textarea {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  outline: none;
+  background-color: #00f4ab0c;
+  border: 1px solid #bbb;
 }
 
 /* Contact end */
@@ -411,95 +487,98 @@ header .header-content img {
 /* Footer start */
 
 #footer {
-    background-color: #313131;
-    color: #fff;
-    padding: 5px;
-    text-align: center;
+  background-color: #313131;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
 }
 
 /* Footer end */
 
 /* Responsive Ipade */
 
-@media (max-width:768px) {
-    #home .navbar nav {
-        display: block;
-        text-align: center;
-    }
-    #home .navbar nav ul{
-        margin-top: 20px;
-    }
-    #home .navbar nav ul a{
-        margin: 0px 8px;
-    }
-    #home .header-content {
-        grid-template-columns: 1fr;
-    }
-    #home .header-content .content-text{
-        margin-top: 5rem;
-        margin-bottom: 0rem;
-    }
-    header .header-content img {
-        max-width: 350px;
-        margin: auto;
-        height: 300px;
-    }
-    #home .header-content h1{
-        font-style: 50px;
-    }
-    #about .about-content,#contact .row{
-        grid-template-columns: 1fr;
-        row-gap: 3rem;
-    }
-    #skills .skills-content .row,#services .row,#portfolio .row {
-        grid-template-columns: repeat(2,1fr);
-    }
-    #contact .row img{
-        max-width: 250px;
-
-        margin: auto;
-    }
-    #home .header-content {
-      padding: 5rem 2rem 0;
-    }
-
+@media (max-width: 768px) {
+  #home .navbar nav {
+    display: block;
+    text-align: center;
+  }
+  #home .navbar nav ul {
+    margin-top: 20px;
+  }
+  #home .navbar nav ul a {
+    margin: 0px 8px;
+  }
+  #home .header-content {
+    grid-template-columns: 1fr;
+  }
+  #home .header-content .content-text {
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+  }
+  header .header-content img {
+    max-width: 350px;
+    margin: auto;
+    height: 300px;
+  }
+  #home .header-content h1 {
+    font-style: 50px;
+  }
+  #about .about-content,
+  #contact .row {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  #skills .skills-content .row,
+  #services .row,
+  #portfolio .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #contact .row img {
+    max-width: 250px;
+    margin: auto;
+  }
+  #home .header-content {
+    padding: 5rem 2rem 0;
+  }
 }
 
+@media (max-width: 556px) {
+  #home .header-content h1 {
+    font-style: 35px;
+  }
+  #home .header-content p span,
+  #home .header-content .title {
+    font-size: 16px;
+  }
+  header .header-content img {
+    margin-top: 2rem;
+    max-height: 250px;
+  }
+  #about h2,
+  #skills h2,
+  #services h2,
+  #portfolio h2,
+  #contact h2 {
+    font-size: 30px;
+  }
 
-@media (max-width:556px) {
-    #home .header-content h1{
-        font-style: 35px;
-    }
-    #home .header-content p span , #home .header-content .title {
-        font-size: 16px;
-    }
-    header .header-content img{
-        margin-top: 2rem;
-        max-height: 250px;
-    }
-    #about h2,
-    #skills h2,
-    #services h2,
-    #portfolio h2,
-    #contact h2{
-        font-size: 30px;
-    }
-
-    #about .about-content .col-1 h3 {
-        font-size: 20px;
-    }
-    #skills .skills-content .row,#services .row,#portfolio .row {
-        grid-template-columns: 1fr;
-    }
-    #contact .row{
-        padding: 2rem 1rem;
-    }
-    #home .header-content {
-      padding: 2rem 2rem 0;
-    }
+  #about .about-content .col-1 h3 {
+    font-size: 20px;
+  }
+  #skills .skills-content .row,
+  #services .row,
+  #portfolio .row {
+    grid-template-columns: 1fr;
+  }
+  #contact .row {
+    padding: 2rem 1rem;
+  }
+  #home .header-content {
+    padding: 2rem 2rem 0;
+  }
 }
 
-@media (max-width:375px){
+@media (max-width: 375px) {
   header .header-content img {
     display: none;
   }
