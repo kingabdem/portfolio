@@ -407,7 +407,7 @@ header .header-content img {
 #portfolio .row .item .item-content h3 {
   font-size: 20px;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #portfolio .row .item .item-content a {
@@ -451,6 +451,17 @@ header .header-content img {
   justify-content: center;
   align-items: center;
 }
+
+.portfolio-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-title > span {
+  font-size: xx-small;
+}
+
 
 /* Portfolio end */
 
