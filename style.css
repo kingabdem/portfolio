@@ -511,7 +511,6 @@ header .header-content img {
 
 @media (max-width: 768px) {
   html {
-  scroll-behavior: smooth;
   scroll-padding-top: 150px;
 }
   #home .navbar nav {
