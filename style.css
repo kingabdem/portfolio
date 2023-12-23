@@ -15,7 +15,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -510,6 +510,10 @@ header .header-content img {
 /* Responsive Ipade */
 
 @media (max-width: 768px) {
+  html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
   #home .navbar nav {
     display: block;
     text-align: center;
