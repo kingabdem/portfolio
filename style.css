@@ -34,6 +34,22 @@ a {
   text-decoration: none;
 }
 
+.butn-head{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 19rem;
+  column-gap: 2rem;
+}
+
+.btn-Download{
+  width: 11rem;
+}
+
+.btn-AboutMe{
+  width: 8rem;
+}
+
+
 /* Loading */
 
 /* Ajoutez ces styles à votre fichier CSS */
@@ -591,6 +607,9 @@ header .header-content img {
   }
   #home .header-content {
     padding: 2rem 2rem 0;
+  }
+  .butn-head{
+    column-gap: 1rem;
   }
 }
 
