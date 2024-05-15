@@ -480,6 +480,12 @@ header .header-content img {
   font-size: xx-small;
 }
 
+.group_link{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
 
 /* Portfolio end */
 
